@@ -1,0 +1,43 @@
+Sample rooms:
+18X18 de0  ds18  g20,20 M3,4 h6,5 p2,2 p4,5 p6,7 p3,4 m10,10 m5,10 m6,6 m7,8 g4,9 w3,10 w9,9 w11,8 w18,4 w5,15
+20X16 de12 ds12 dw12 dn12 g2,7                                     M1,4                              p4,2
+14X25  dw2  dn2 g5,7 M3,6 p7,2 m10,10
+10X19 de15 dw15 ds15 dn15 g10,7 M5,4 p2,5
+13X21 de5  ds7 dn4 g8,12 M8,14 p10,2 m2,20 
+20X25 de17 ds14 dw19 g18,17                                                                                    M0,0 p2,12 s2,3 g20,25
+
+
+
+1) By adding extra white spaces between two items i.e. 
+20X12 M2,3             h4,5
+Result-> It will convert the above to this: 20X12 M2,3 h4,5
+
+2) By placing items at 0,0 co-ordinates i.e.
+20X20 h0,0  
+Result-> It will place the item at top-left corner of the room
+
+3) By placing items at max co-ordinates of the room i.e.
+20X10 h20,10
+Result-> It will place the item at bottom-right corner of the room
+
+4) By placing items, beyond max co-odinates of the room i.e.
+20X25 h25,50
+Result-> It will convert it's co-ordinate to maximum floor co-ordinate and place the item at bottom-right corner of the room
+
+5) By placing door at 0 co-ordinates
+20X25 de0
+Result-> It will place the door at 1st position at east
+
+6) By placing door at max co-ordinate
+20X25 de20
+Result-> It will place the door at very bottom at east
+
+7) By placing door, beyond max co-ordinate
+20X25 de25
+Result-> It will place the door at very bottom at east
+
+8) By generating the smallest room
+1X1 or 0X0
+Result-> It will generate a room with a single floor
+
+
